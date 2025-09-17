@@ -4,7 +4,7 @@
 
 一个简单的办法就是用一个嵌入式os来处理，但是os有时候太大了，很多时候还是希望裸机上运行，这样code size不会太大，代码也相对清晰一些。
 
-为满足上述需求，本项目将一些常用到的功能整合在一起，以便用户写一些跨平台应用。
+为满足上述需求，本项目将一些常用到的功能整合在一起，以便用户写一些跨平台应用。本项目地址：[bobwenstudy/easy_tools: 一个跨平台裸机工具库，包含任务/堆栈/消息/定时器/日志等实现。](https://github.com/bobwenstudy/easy_tools)
 
 - TASK/MSG/HEAP功能，在嵌入式裸机开发中，经常有任务(Task)和消息队列(Message)的管理需求，直接加入OS又太过复杂了，所以本项目提供适用于嵌入式裸机环境需要进行Task和Message功能需求的人群。项目地址：[bobwenstudy/bare_task_msg (github.com)](https://github.com/bobwenstudy/bare_task_msg)
 - 定时器功能，嵌入式需求通常伴随低功耗和定时需求，本项目实现了一整套定时器管理功能。
