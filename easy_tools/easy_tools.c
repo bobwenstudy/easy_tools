@@ -41,6 +41,7 @@ void easy_tools_polling_work(void)
 void easy_tools_init(void)
 {
     easy_tools_api_init();
+    easy_timer_init();
 #if EASY_CONFIG_FUNCTION_TASK
     easy_task_init();
 #endif
