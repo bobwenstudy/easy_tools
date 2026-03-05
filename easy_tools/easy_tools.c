@@ -46,7 +46,7 @@ void easy_tools_init(void)
     easy_task_init();
 #endif
 #if EASY_CONFIG_FUNCTION_HEAP
-    struct easy_heap_ptr heap;
+    struct easy_heap_ptr heap = {0};
     easy_tools_api_heap_init(&heap);
     easy_heap_init(heap.buf, heap.len);
 #endif

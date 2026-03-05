@@ -216,6 +216,17 @@ void easy_heap_init(uint32_t *heap, uint32_t size)
     BlockLink_t *pxFirstFreeBlock;
     uintptr_t uxAddress;
 
+    // Safety check: validate heap pointer and size
+    if (heap == NULL || size < (2 * HEAP_STRUCT_SIZE))
+    {
+        // Invalid parameters, do not initialize
+        heapstat.xHeapAddress = 0;
+        heapstat.xHeapSize = 0;
+        heapstat.xFreeBytesRemaining = 0;
+        heapstat.xMinimumEverFreeBytesRemaining = 0;
+        return;
+    }
+
     /* Ensure the heap starts on a correctly aligned boundary. */
     uxAddress = (uintptr_t)heap;
 
